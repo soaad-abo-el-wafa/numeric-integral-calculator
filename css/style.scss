@@ -1,0 +1,67 @@
+$midnight-blue:#036;
+$ocean-blue:#256894;
+$pale-sky:#6b717f;
+$grass-green:#479200;
+$dark-green: #226e00;
+$orange-red:#C63D0F;
+$dirty-white:#f1ede8;
+
+$color-background:$dirty-white;
+$color-background-shade:darken($dirty-white,10);
+$color-background-light:#d8cdbf;
+
+$color-text:#2d2d2d;
+$color-text-invert:invert($color-text);
+$color-text-strong:$orange-red;
+
+$color-step:lighten($midnight-blue,5);
+$color-step-active:lighten($dark-green,2);
+
+$color-modal-header:$midnight-blue;
+
+$el_size:100px;
+
+@font-face {
+  font-family: 'Andes';
+  src: url(../assets/Andes.ttf);
+  font-weight: 400; }
+
+
+body,html{
+  background-color:$color-background;
+  background-image:url(../assets/bg_noise.png);
+  line-height: 1.5;
+  text-align: left;
+}
+#title{
+  display:block;
+  padding: 1rem;
+
+  text-align:center;
+  font-size: 5rem;
+  color: $color-text;
+  font-family: 'Andes', serif;
+  letter-spacing: 3px;
+  text-shadow: 3px 3px 0 $color-background-light;
+}
+@media only screen and (max-width: 800px) {
+  #title {
+    font-size: 2rem;
+  }
+}
+#plot-container{
+  width:1000px;
+  height:600px;
+  margin:40px auto;
+  position:relative;
+}
+
+.dg{
+  z-index:9000 !important;
+}
+
+#integration-data th, #integration-data td{
+  text-align: center;
+  vertical-align: middle;
+
+}
